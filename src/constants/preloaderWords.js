@@ -1,0 +1,15 @@
+export const words = [
+  "Zdravo",
+  "Bonjour",
+  "Ciao",
+  "Olà",
+  "やあ",
+  "Hallå",
+  "Γειά σου",
+  "Guten tag",
+  "Привет",
+  "مرحبًا",
+  "Hej",
+  "你好",
+  "Hello",
+];

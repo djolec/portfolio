@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @keyframes globe {
+    0% {
+      transform: translate(-50%, -50%) rotate(15deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(-15deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(15deg);
+    }
+  }
+
+  .globe {
+    animation: globe 5.4s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+  }
+
+  @keyframes circle1 {
+    0% {
+      border-radius: 50%;
+      box-shadow: inset 0.1em 0px 0px 0.08em white;
+      width: 100%;
+    }
+    49% {
+      border-radius: 50%;
+      box-shadow: inset 0.1em 0px 0px 0.08em white;
+      background: transparent;
+    }
+    50% {
+      border-radius: 0%;
+      width: 0.175em;
+      background: white;
+    }
+    51% {
+      border-radius: 50%;
+      box-shadow: inset -0.1em 0px 0px 0.08em white;
+      background: transparent;
+    }
+    100% {
+      border-radius: 50%;
+      box-shadow: inset -0.1em 0px 0px 0.08em white;
+      width: 100%;
+    }
+  }
+
+  .circle1 {
+    animation: circle1 2.7s linear infinite;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #d1e5ff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #455ce9;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .parent:hover .child {
+    bottom: 7%;
+    transform: translateY(75%);
+    z-index: 2;
+    transition-delay: 0s, 0.5s, 0.5s;
+  }
+
+  .child {
+    bottom: -75%;
+    transition:
+      bottom 0.5s,
+      transform 0.5s,
+      z-index 0s;
+    transition-delay: 0.5s, 0s, 0.5s;
+    z-index: 1;
+  }
+
+  @media (max-width: 640px) {
+    .parent:hover .child {
+      transition: none;
+    }
+
+    .child {
+      transition: none;
+    }
+  }
+}
