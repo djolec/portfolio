@@ -73,7 +73,18 @@ const PageTransition = ({ children }) => {
         style={{
           opacity: dimensions.width == null ? 1 : 0,
         }}
-      />
+      >
+        <div
+          className="fixed left-[50%] top-[40%] z-50 flex -translate-x-[50%] -translate-y-[50%] flex-row items-center justify-center gap-4 text-5xl text-white"
+          {...anim(text)}
+        >
+          <div className="h-[10px] w-[10px] rounded-full bg-white" />
+
+          <p className="text-[50px] text-white">
+            {routes[location.pathname] ? routes[location.pathname] : "Error"}
+          </p>
+        </div>
+      </div>
 
       {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />}
       {children}
