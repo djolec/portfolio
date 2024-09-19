@@ -11,7 +11,7 @@ const Project = ({ index, title, setModal, color, src, link, layout }) => {
   return (
     <Link
       to={`/work/${link}`}
-      className={`group items-center justify-between transition-all duration-500 tablet:block tablet:border-b-0 tablet:px-0 tablet:py-0 tablet:first-of-type:border-t-0 ${layout === "list" ? "md:border-b-borderLight md:first-of-type:border-t-borderLight md:flex md:border-b md:px-paddingX04 md:py-10 md:first-of-type:border-t" : "md:block"}`}
+      className={`group items-center justify-between transition-all duration-500 tablet:block tablet:border-b-0 tablet:px-0 tablet:py-0 tablet:first-of-type:border-t-0 ${layout === "list" ? "md:flex md:border-b md:border-b-borderLight md:px-paddingX04 md:py-10 md:first-of-type:border-t md:first-of-type:border-t-borderLight" : "md:block"}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -28,7 +28,7 @@ const Project = ({ index, title, setModal, color, src, link, layout }) => {
       </div>
 
       <h2
-        className={`border-b-borderLight tablet:border-b-borderLight border-b py-3 text-5xl font-medium transition-all duration-500 sm:text-[1.2em] tablet:border-b tablet:py-3 tablet:group-hover:-translate-x-0 sm:portrait:text-[1.7em] ${layout === "list" ? "md:border-b-0 md:py-0 md:group-hover:-translate-x-8 md:group-hover:opacity-60" : "md:border-b md:py-3 md:group-hover:-translate-x-0"}`}
+        className={`border-b border-b-borderLight py-3 text-5xl font-medium transition-all duration-500 sm:text-[1.2em] tablet:border-b tablet:border-b-borderLight tablet:py-3 tablet:group-hover:-translate-x-0 sm:portrait:text-[1.7em] ${layout === "list" ? "md:border-b-0 md:py-0 md:group-hover:-translate-x-8 md:group-hover:opacity-60" : "md:border-b md:py-3 md:group-hover:-translate-x-0"}`}
       >
         {title}
       </h2>

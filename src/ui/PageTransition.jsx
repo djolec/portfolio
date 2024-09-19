@@ -68,7 +68,7 @@ const PageTransition = ({ children }) => {
         </p>
       </motion.div>
 
-      <div
+      {/* <div
         className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-screen bg-[#141517]"
         style={{
           opacity: dimensions.width == null ? 1 : 0,
@@ -84,9 +84,16 @@ const PageTransition = ({ children }) => {
             {routes[location.pathname] ? routes[location.pathname] : "Error"}
           </p>
         </div>
-      </div>
+      </div> */}
 
-      {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />}
+      {/* {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />} */}
+
+      <SVG
+        width={window.innerWidth}
+        height={window.innerHeight}
+        isMobile={isMobile}
+      />
+
       {children}
     </div>
   );
@@ -118,7 +125,6 @@ const SVG = ({ width, height, isMobile = false }) => {
       d: targetPath,
       transition: {
         duration: 0.75,
-
         ease: [0.76, 0, 0.24, 1],
       },
     },
@@ -139,7 +145,6 @@ const SVG = ({ width, height, isMobile = false }) => {
       top: "-100vh",
       transition: {
         duration: 0.75,
-
         ease: [0.76, 0, 0.24, 1],
       },
       transitionEnd: {
@@ -161,7 +166,7 @@ const SVG = ({ width, height, isMobile = false }) => {
       className="fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-screen fill-[#141517]"
       {...anim(slide)}
     >
-      <motion.path {...anim(curve)}></motion.path>
+      <motion.path {...anim(curve)} />
     </motion.svg>
   );
 };
