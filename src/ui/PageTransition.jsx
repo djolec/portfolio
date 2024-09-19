@@ -69,7 +69,7 @@ const PageTransition = ({ children }) => {
       </motion.div>
 
       <div
-        className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-screen bg-[#141517]"
+        className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-full bg-[#141517]"
         style={{
           opacity: window.innerWidth == null ? 1 : 0,
         }}
