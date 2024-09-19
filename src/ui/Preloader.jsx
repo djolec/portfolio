@@ -44,21 +44,21 @@ const Preloader = () => {
       () => {
         setIndex(index + 1);
       },
-      index === 0 ? 1200 : 190
+      index === 0 ? 1200 : 190,
     );
   }, [index]);
 
   return (
-    <div className="fixed top-0 left-0 h-screen w-screen z-[200]">
+    <div className="fixed left-0 top-0 z-[200] h-screen w-screen">
       {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />}
 
       <motion.div
-        className="flex items-center justify-center gap-4 w-fit absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[90]"
+        className="absolute left-1/2 top-[40%] z-[90] flex w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-4"
         {...anim(slideUp)}
       >
-        <div className="h-[10px] w-[10px] rounded-full bg-white z-[100]" />
+        <div className="z-[100] h-[10px] w-[10px] rounded-full bg-white" />
 
-        <p className="text-[50px] z-[100] text-white whitespace-nowrap">
+        <p className="z-[100] whitespace-nowrap text-[50px] text-white">
           {words[index]}
         </p>
       </motion.div>
@@ -112,7 +112,7 @@ const SVG = ({ width, height, isMobile = false }) => {
 
   return (
     <motion.svg
-      className="w-screen h-[calc(100vh+600px)] -top-[300px] left-0 absolute z-[80] fill-[#141517]"
+      className="absolute -top-[300px] left-0 z-[80] h-[calc(100vh+600px)] w-screen fill-[#141517]"
       {...anim(slide)}
     >
       <motion.path {...anim(curve)} />
