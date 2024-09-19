@@ -17,7 +17,7 @@ const anim = (variants) => {
 };
 
 const PageTransition = ({ children }) => {
-  const dimensions = useDimensions();
+  // const dimensions = useDimensions();
   const isMobile = useIsMobile();
 
   const { location } = useContext(AppContext);
@@ -68,10 +68,10 @@ const PageTransition = ({ children }) => {
         </p>
       </motion.div>
 
-      {/* <div
+      <div
         className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-screen bg-[#141517]"
         style={{
-          opacity: dimensions.width == null ? 1 : 0,
+          opacity: window.innerWidth == null ? 1 : 0,
         }}
       >
         <div
@@ -84,7 +84,7 @@ const PageTransition = ({ children }) => {
             {routes[location.pathname] ? routes[location.pathname] : "Error"}
           </p>
         </div>
-      </div> */}
+      </div>
 
       {/* {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />} */}
 
