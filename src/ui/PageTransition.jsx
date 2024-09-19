@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { routes } from "../constants/pageTransitionRoutes";
 
-import useDimensions from "../hooks/useDimensions";
+// import useDimensions from "../hooks/useDimensions";
 import useScrollToTop from "../hooks/useScrollToTop";
 import useIsMobile from "../hooks/useIsMobile";
 import { useContext } from "react";
@@ -17,7 +17,7 @@ const anim = (variants) => {
 };
 
 const PageTransition = ({ children }) => {
-  const dimensions = useDimensions();
+  // const dimensions = useDimensions();
   const isMobile = useIsMobile();
 
   const { location } = useContext(AppContext);
@@ -68,7 +68,7 @@ const PageTransition = ({ children }) => {
         </p>
       </motion.div>
 
-      {/* <div
+      <div
         className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-screen bg-[#141517]"
         style={{
           opacity: window.innerWidth == null ? 1 : 0,
@@ -84,7 +84,7 @@ const PageTransition = ({ children }) => {
             {routes[location.pathname] ? routes[location.pathname] : "Error"}
           </p>
         </div>
-      </div> */}
+      </div>
 
       {/* {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />} */}
 
