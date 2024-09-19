@@ -5,7 +5,6 @@ import useIsMobile from "../../hooks/useIsMobile";
 const Devices = ({ folder }) => {
   const isMobile = useIsMobile();
   const ref = useRef(null);
-  console.log(isMobile);
 
   const isInView = useInView(ref, {
     margin: "0px 0px -90% 0px",
