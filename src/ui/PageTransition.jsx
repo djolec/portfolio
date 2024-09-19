@@ -89,8 +89,8 @@ const PageTransition = ({ children }) => {
       {/* {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />} */}
 
       <SVG
-        width={window.innerWidth}
-        height={window.innerHeight}
+        // width={window.innerWidth}
+        // height={window.innerHeight}
         isMobile={isMobile}
       />
 
@@ -101,19 +101,19 @@ const PageTransition = ({ children }) => {
 
 export default PageTransition;
 
-const SVG = ({ width, height, isMobile = false }) => {
+const SVG = ({ isMobile = false }) => {
   const initialPath = `
         M0 300 
-        Q${width / 2} ${isMobile ? 220 : 0} ${width} 300
-        L${width} ${height + 300}
-        Q${width / 2} ${height + (isMobile ? 440 : 600)} 0 ${height + 300}
+        Q${window.innerWidth / 2} ${isMobile ? 220 : 0} ${window.innerWidth} 300
+        L${window.innerWidth} ${window.innerHeight + 300}
+        Q${window.innerWidth / 2} ${window.innerHeight + (isMobile ? 440 : 600)} 0 ${window.innerHeight + 300}
         L0 0
     `;
   const targetPath = `
         M0 300 
-        Q${width / 2} 0 ${width} 300
-        L${width} ${height}
-        Q${width / 2} ${height} 0 ${height}
+        Q${window.innerWidth / 2} 0 ${window.innerWidth} 300
+        L${window.innerWidth} ${window.innerHeight}
+        Q${window.innerWidth / 2} ${window.innerHeight} 0 ${window.innerHeight}
         L0 0
     `;
 
