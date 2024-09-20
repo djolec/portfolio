@@ -65,7 +65,6 @@ const ContactForm = () => {
                     "border-b border-b-gray-500/40"
                   }`}
                   key={field.name}
-                  // {...pageAnimation}
                 >
                   <label
                     className={`text-[1.2rem] transition-colors duration-300 sm:text-[0.3em] sm:portrait:text-[0.35em] ${

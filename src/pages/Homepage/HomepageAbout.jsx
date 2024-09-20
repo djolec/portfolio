@@ -1,7 +1,6 @@
 import useIsInView from "../../hooks/useIsInView";
 import PhraseLine from "../../ui/PhraseLine";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import { pageAnimation } from "../../constants/pageAnim";
 import { AppContext } from "../../ui/AnimatedRoutes";
 import { useContext } from "react";
 import Button from "../../ui/Button";

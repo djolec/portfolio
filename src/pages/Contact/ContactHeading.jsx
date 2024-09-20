@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
-import { pageAnimation } from "../../constants/pageAnim";
 
 const ContactHeading = () => {
   return (
-    <motion.div
-      className="mx-auto flex w-full max-w-[150rem] flex-row items-end justify-between px-4 pt-48 text-[3rem] sm:px-paddingX sm:pt-[30vh] sm:text-headingClamp sm:portrait:pt-[20vh]"
-      // {...pageAnimation}
-    >
+    <motion.div className="mx-auto flex w-full max-w-[150rem] flex-row items-end justify-between px-4 pt-48 text-[3rem] sm:px-paddingX sm:pt-[30vh] sm:text-headingClamp sm:portrait:pt-[20vh]">
       <div className="w-full">
         <div className="flex flex-row items-center gap-2 sm:portrait:justify-center">
           <img

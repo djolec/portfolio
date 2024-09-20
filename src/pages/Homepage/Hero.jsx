@@ -1,26 +1,12 @@
 import { useTransform, motion } from "framer-motion";
 import Globe from "../../ui/Globe";
 import SlidingText from "../../ui/SlidingText";
-// import { AppContext } from "../../ui/AnimatedRoutes";
-// import { useContext } from "react";
 
 const Hero = ({ scrollYProgress }) => {
-  // const { isLoadingApp } = useContext(AppContext);
   const heroBg = useTransform(scrollYProgress, [0, 1], ["0px", "500px"]);
 
   return (
-    <motion.div
-      className="relative h-[105vh] w-full overflow-hidden bg-heroGray text-hero"
-      // initial={{ y: "400px" }}
-      // animate={{
-      //   y: "0px",
-      //   transition: {
-      //     duration: 0.75,
-      //     ease: [0.76, 0, 0.24, 1],
-      //     // delay: isLoadingApp ? 4 : 0,
-      //   },
-      // }}
-    >
+    <motion.div className="relative h-[105vh] w-full overflow-hidden bg-heroGray text-hero">
       <motion.img
         className={`absolute bottom-0 left-1/2 h-[90%] w-auto max-w-max sm:bottom-auto sm:top-0 sm:h-full`}
         src="images/hero.webp"

@@ -45,6 +45,7 @@ export default {
         projectInfo: "clamp(1.0109rem, 0.902rem + 0.5443vw, 1.5552rem)",
         projectFont: "clamp(1.4774rem, 1.3152rem + 0.8114vw, 2.2888rem)",
         projectFont2: "clamp(3.6547rem, 2.9361rem + 3.5932vw, 7.2479rem)",
+        pageTransition: "clamp(3.1104rem, 2.7994rem + 1.5552vw, 4.6656rem)",
       },
       screens: {
         tablet: {
