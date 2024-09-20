@@ -68,10 +68,10 @@ const PageTransition = ({ children }) => {
         </p>
       </motion.div>
 
-      <div
+      {/* <div
         className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-full bg-red-500"
         style={{
-          opacity: window.innerWidth == null ? 1 : 0,
+          opacity: window.innerWidth > 0 ? 0 : 1,
         }}
       >
         <div
@@ -84,7 +84,7 @@ const PageTransition = ({ children }) => {
             {routes[location.pathname] ? routes[location.pathname] : "Error"}
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />} */}
 
@@ -155,7 +155,6 @@ const SVG = ({ isMobile = false }) => {
       top: "-300px",
       transition: {
         duration: 0.75,
-
         ease: [0.76, 0, 0.24, 1],
       },
     },
