@@ -7,14 +7,6 @@ import useIsTabletOrMobile from "../hooks/useIsTabletOrMobile";
 import Preloader from "./Preloader";
 import useIsLoadingApp from "../hooks/useIsLoadingApp";
 
-// const Homepage = lazy(() => import("../pages/Homepage/Homepage"));
-// const About = lazy(() => import("../pages/About/About"));
-// const Contact = lazy(() => import("../pages/Contact/Contact"));
-// const ProjectPage = lazy(() => import("../pages/ProjectPage/ProjectPage"));
-// const SuccessFailedError = lazy(
-//   () => import("../pages/Contact/SuccessFailedError"),
-// );
-// const Work = lazy(() => import("../pages/Work/Work"));
 import Homepage from "../pages/Homepage/Homepage";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";

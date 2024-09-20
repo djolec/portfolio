@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { words } from "../constants/preloaderWords";
-// import useDimensions from "../hooks/useDimensions";
 import useIsMobile from "../hooks/useIsMobile";
 const anim = (variants) => {
   return {
@@ -13,7 +12,6 @@ const anim = (variants) => {
 };
 
 const Preloader = () => {
-  // const dimensions = useDimensions();
   const [index, setIndex] = useState(0);
   const isMobile = useIsMobile();
 
@@ -25,7 +23,8 @@ const Preloader = () => {
     enter: {
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.7,
+        delay: 0.2,
       },
     },
     exit: {
