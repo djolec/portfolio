@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { routes } from "../constants/pageTransitionRoutes";
 
-// import useDimensions from "../hooks/useDimensions";
 import useScrollToTop from "../hooks/useScrollToTop";
 import useIsMobile from "../hooks/useIsMobile";
 import { useContext } from "react";
@@ -17,7 +16,6 @@ const anim = (variants) => {
 };
 
 const PageTransition = ({ children }) => {
-  // const dimensions = useDimensions();
   const isMobile = useIsMobile();
 
   const { location } = useContext(AppContext);
@@ -68,31 +66,7 @@ const PageTransition = ({ children }) => {
         </p>
       </motion.div>
 
-      {/* <div
-        className="pointer-events-none fixed -top-[300px] left-0 z-40 h-[calc(100vh+600px)] w-full bg-red-500"
-        style={{
-          opacity: window.innerWidth > 0 ? 0 : 1,
-        }}
-      >
-        <div
-          className="fixed left-[50%] top-[40%] z-50 flex -translate-x-[50%] -translate-y-[50%] flex-row items-center justify-center gap-4 text-5xl text-white"
-          {...anim(text)}
-        >
-          <div className="h-[10px] w-[10px] rounded-full bg-white" />
-
-          <p className="text-[50px] text-white">
-            {routes[location.pathname] ? routes[location.pathname] : "Error"}
-          </p>
-        </div>
-      </div> */}
-
-      {/* {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />} */}
-
-      <SVG
-        // width={window.innerWidth}
-        // height={window.innerHeight}
-        isMobile={isMobile}
-      />
+      <SVG isMobile={isMobile} />
 
       {children}
     </div>

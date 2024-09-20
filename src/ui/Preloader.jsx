@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { words } from "../constants/preloaderWords";
-import useDimensions from "../hooks/useDimensions";
+// import useDimensions from "../hooks/useDimensions";
 import useIsMobile from "../hooks/useIsMobile";
 const anim = (variants) => {
   return {
@@ -13,7 +13,7 @@ const anim = (variants) => {
 };
 
 const Preloader = () => {
-  const dimensions = useDimensions();
+  // const dimensions = useDimensions();
   const [index, setIndex] = useState(0);
   const isMobile = useIsMobile();
 
@@ -50,7 +50,7 @@ const Preloader = () => {
 
   return (
     <div className="fixed left-0 top-0 z-[200] h-screen w-screen">
-      {dimensions.width !== null && <SVG {...dimensions} isMobile={isMobile} />}
+      <SVG isMobile={isMobile} />
 
       <motion.div
         className="absolute left-1/2 top-[40%] z-[90] flex w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-4"
@@ -68,19 +68,19 @@ const Preloader = () => {
 
 export default Preloader;
 
-const SVG = ({ width, height, isMobile = false }) => {
+const SVG = ({ isMobile = false }) => {
   const initialPath = `
         M0 300 
-        Q${width / 2} ${isMobile ? 220 : 0} ${width} 300
-        L${width} ${height + 300}
-        Q${width / 2} ${height + (isMobile ? 440 : 600)} 0 ${height + 300}
+        Q${window.innerWidth / 2} ${isMobile ? 220 : 0} ${window.innerWidth} 300
+        L${window.innerWidth} ${window.innerHeight + 300}
+        Q${window.innerWidth / 2} ${window.innerHeight + (isMobile ? 440 : 600)} 0 ${window.innerHeight + 300}
         L0 0
     `;
   const targetPath = `
         M0 300 
-        Q${width / 2} 0 ${width} 300
-        L${width} ${height}
-        Q${width / 2} ${height} 0 ${height}
+        Q${window.innerWidth / 2} 0 ${window.innerWidth} 300
+        L${window.innerWidth} ${window.innerHeight}
+        Q${window.innerWidth / 2} ${window.innerHeight} 0 ${window.innerHeight}
         L0 0
     `;
 
