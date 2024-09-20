@@ -100,7 +100,7 @@ const Modal = ({ modal, projects, layout }) => {
       </motion.div>
 
       <motion.div
-        className="pointer-events-none fixed z-[20] h-[4em] w-[4em] items-center justify-center rounded-full bg-[#455CE9] text-[0.3em] text-white sm:flex"
+        className="pointer-events-none fixed z-[20] hidden h-[4em] w-[4em] items-center justify-center rounded-full bg-[#455CE9] text-[0.3em] text-white sm:flex"
         ref={cursorLabel}
         variants={scaleAnimation}
         initial="initial"
