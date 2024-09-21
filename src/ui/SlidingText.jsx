@@ -1,8 +1,8 @@
 import { motion, useTransform } from "framer-motion";
-import useAnimationFrameHook from "../hooks/useAnimationFrame";
+import useXPercent from "../hooks/useXPercent";
 
 const SlidingText = ({ scrollYProgress }) => {
-  const { xPercent } = useAnimationFrameHook();
+  const { xPercent } = useXPercent();
   const scrollVal = useTransform(scrollYProgress, [0, 1], [0, 1500]);
 
   const commonStyle = `
