@@ -1,9 +1,15 @@
 import { motion, useTransform } from "framer-motion";
 import useXPercent from "../hooks/useXPercent";
+import useIsMobile from "../hooks/useIsMobile";
 
 const SlidingText = ({ scrollYProgress }) => {
+  const isMobile = useIsMobile();
   const { xPercent } = useXPercent();
-  const scrollVal = useTransform(scrollYProgress, [0, 1], [0, 1500]);
+  const scrollVal = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? [0, 0] : [0, 1500],
+  );
 
   const commonStyle = `
   text-white pr-[0.2em] text-heroSliding font-medium leading-none sm:portrait:text-[28vw]
