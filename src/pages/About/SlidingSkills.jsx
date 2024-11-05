@@ -28,22 +28,27 @@ const SlidingSkills = () => {
     { name: "CSS", img: "css.svg" },
     { name: "JavaScript", img: "javascript.svg" },
     { name: "React", img: "react.svg" },
+    { name: "Node JS", img: "nodejs.svg" },
+    { name: "Express JS", img: "expressjs.svg" },
     { name: "TypeScript", img: "typescript.svg" },
-    { name: "Tailwind CSS", img: "tailwind.svg" },
+
     { name: "HTML5", img: "html.svg" },
     { name: "CSS", img: "css.svg" },
     { name: "JavaScript", img: "javascript.svg" },
     { name: "React", img: "react.svg" },
+    { name: "Node JS", img: "nodejs.svg" },
+    { name: "Express JS", img: "expressjs.svg" },
     { name: "TypeScript", img: "typescript.svg" },
-    { name: "Tailwind CSS", img: "tailwind.svg" },
   ];
   const skills2 = [
+    { name: "Tailwind CSS", img: "tailwind.svg" },
     { name: "Material UI", img: "materialui.svg" },
     { name: "Styled Components", img: "styledcomponents.svg" },
     { name: "Framer Motion", img: "framermotion.svg" },
     { name: "React Query", img: "reactquery.svg" },
     { name: "Formik", img: "formik.svg" },
     { name: "Redux", img: "redux.svg" },
+    { name: "Tailwind CSS", img: "tailwind.svg" },
     { name: "Material UI", img: "materialui.svg" },
     { name: "Styled Components", img: "styledcomponents.svg" },
     { name: "Framer Motion", img: "framermotion.svg" },
@@ -59,7 +64,7 @@ const SlidingSkills = () => {
       </h2>
 
       <div className="px-4 sm:px-paddingX06 sm:portrait:px-12">
-        <div className="bg-borderLight h-[1px]" />
+        <div className="h-[1px] bg-borderLight" />
       </div>
 
       <div className="flex flex-col" ref={container}>
