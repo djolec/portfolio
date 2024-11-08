@@ -72,7 +72,7 @@ const SlidingSkills = () => {
         <div className="h-[1px] bg-borderLight" />
       </div>
 
-      <div className="flex flex-col border" ref={container}>
+      <div className="flex flex-col" ref={container}>
         <motion.div
           className="grid w-[200vw] auto-cols-fr grid-flow-col"
           style={{ x: slide1 }}
