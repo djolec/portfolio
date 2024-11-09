@@ -15,8 +15,8 @@ const FooterContact = () => {
 
   const contactInfo = [
     {
-      text: "djordjeenglish@gmail.com",
-      link: "mailto:djordjeenglish@gmail.com",
+      text: "george86.dev@gmail.com",
+      link: "mailto:george86.dev@gmail.com",
       type: "mailto:",
     },
     {
@@ -52,7 +52,7 @@ const FooterContact = () => {
           />
         </div>
 
-        <div className="bg-borderDark relative my-24 h-[1px] w-full sm:portrait:my-[16vw]">
+        <div className="relative my-24 h-[1px] w-full bg-borderDark sm:portrait:my-[16vw]">
           <motion.div
             className="absolute right-[10%] top-1/2 w-fit"
             style={{ x: xButton, translateY: "-50%" }}

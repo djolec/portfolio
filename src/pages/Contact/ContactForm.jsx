@@ -128,8 +128,8 @@ const ContactForm = () => {
             />
 
             <SocialLink
-              text={"djordjeenglish@gmail.com"}
-              href={"mailto:djordjeenglish@gmail.com"}
+              text={"george86.dev@gmail.com"}
+              href={"mailto:george86.dev@gmail.com"}
               xOffset={3}
             />
           </div>

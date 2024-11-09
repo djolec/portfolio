@@ -88,7 +88,7 @@ const SlidingSkills = () => {
                   src={`/images/skills/${skill.img}`}
                 />
 
-                <h6 className="hidden text-center text-[1em] text-black landscape:block">
+                <h6 className="hidden text-center text-[0.8em] text-black landscape:block">
                   {skill.name}
                 </h6>
               </div>
@@ -110,7 +110,7 @@ const SlidingSkills = () => {
                   className="h-auto w-full"
                   src={`/images/skills/${skill.img}`}
                 />
-                <h6 className="hidden text-center text-[1em] text-black landscape:block">
+                <h6 className="hidden text-center text-[0.8em] text-black landscape:block">
                   {skill.name}
                 </h6>
               </div>
