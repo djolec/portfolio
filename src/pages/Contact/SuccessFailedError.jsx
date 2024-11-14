@@ -13,8 +13,6 @@ const SuccessFailedError = () => {
     ? successFailedError.filter((item) => item.path === location.pathname)[0]
     : successFailedError.filter((item) => item.path === "*")[0];
 
-  console.log(info);
-
   return (
     <PageTransition>
       <Header textColor="text-white" />

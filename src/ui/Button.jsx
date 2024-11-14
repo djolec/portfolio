@@ -3,7 +3,14 @@ import Magnetic from "./Magnetic";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Button = ({ children, to, bgColor = "bg-[#1C1D20]", link, type }) => {
+const Button = ({
+  children,
+  to,
+  bgColor = "bg-[#1C1D20]",
+  link,
+  type,
+  disabled,
+}) => {
   const { isHovered, mouseEnter, mouseLeave } = useIsHovered();
 
   const hovered = {
@@ -118,7 +125,10 @@ const Button = ({ children, to, bgColor = "bg-[#1C1D20]", link, type }) => {
 
   if (type === "submit")
     return (
-      <button className="text-roundButtonText sm:portrait:text-[2.4vw]">
+      <button
+        className="text-roundButtonText disabled:cursor-not-allowed sm:portrait:text-[2.4vw]"
+        disabled={disabled}
+      >
         <Magnetic xOffset={1.5} yOffset={1.5}>
           <div
             className={`${bgColor} relative h-buttonHeight2 w-buttonWidth2 overflow-hidden rounded-full text-white`}

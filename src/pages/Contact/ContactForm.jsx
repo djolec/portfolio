@@ -1,6 +1,7 @@
 import { formData } from "../../constants/formData";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -30,22 +31,38 @@ const validationSchema = Yup.object({
 });
 
 const ContactForm = () => {
+  const [isSending, setIsSending] = useState(false);
   const navigate = useNavigate();
 
-  const onSubmit = (values) => {
-    emailjs
-      .send("service_71itzuv", "template_pcmslgc", values, {
+  // const onSubmit = (values) => {
+  //   emailjs
+  //     .send("service_71itzuv", "template_pcmslgc", values, {
+  //       publicKey: "1I4E2cy4tQdonYI7d",
+  //     })
+  //     .then(
+  //       () => {
+  //         navigate("/contact/success");
+  //       },
+  //       (error) => {
+  //         navigate("/contact/failed");
+  //         console.log(error);
+  //       },
+  //     );
+  // };
+
+  const onSubmit = async (values) => {
+    setIsSending(true); // Disable button when email is being sent
+    try {
+      await emailjs.send("service_71itzuv", "template_pcmslgc", values, {
         publicKey: "1I4E2cy4tQdonYI7d",
-      })
-      .then(
-        () => {
-          navigate("/contact/success");
-        },
-        (error) => {
-          navigate("/contact/failed");
-          console.log(error);
-        },
-      );
+      });
+      navigate("/contact/success"); // Navigate on success
+    } catch (error) {
+      console.log(error); // Log error for debugging
+      navigate("/contact/failed"); // Navigate on failure
+    } finally {
+      setIsSending(false); // Re-enable button
+    }
   };
 
   return (
@@ -107,8 +124,22 @@ const ContactForm = () => {
               ))}
 
               <div className="absolute right-0 w-fit -translate-y-1/2 text-base leading-none">
-                <Button bgColor="bg-[#455CE9]" type="submit">
-                  Send it
+                <Button
+                  bgColor="bg-[#455CE9]"
+                  type="submit"
+                  disabled={isSending}
+                >
+                  {isSending ? (
+                    <div
+                      className="mx-auto h-10 w-10 animate-spin rounded-full border-[3px] border-current border-t-transparent text-[var(--on-primary)]"
+                      role="status"
+                      aria-label="loading"
+                    >
+                      <span className="sr-only">Sending...</span>
+                    </div>
+                  ) : (
+                    "Send it"
+                  )}
                 </Button>
               </div>
             </Form>
