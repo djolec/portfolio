@@ -75,7 +75,7 @@ const Preloader = () => {
         className="fixed left-1/2 top-[40%] z-[210] flex w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-4 text-pageTransition text-white"
         {...anim(slideUp)}
       >
-        <div className="z-[100] h-[0.25em] w-[0.25em] rounded-full bg-white" />
+        {/* <div className="z-[100] h-[0.25em] w-[0.25em] rounded-full bg-white" /> */}
 
         <p className="z-[100] whitespace-nowrap text-[1em]">{words[index]}</p>
       </motion.div>

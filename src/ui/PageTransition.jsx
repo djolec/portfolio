@@ -95,9 +95,10 @@ const PageTransition = ({ children }) => {
         className="fixed left-[50%] top-[40%] z-40 flex -translate-x-[50%] -translate-y-[50%] flex-row items-center justify-center gap-4 text-pageTransition text-white"
         {...anim(text)}
       >
-        <div className="h-[0.25em] w-[0.25em] rounded-full bg-white" />
+        {/* <div className="h-[0.25em] w-[0.25em] rounded-full bg-white" /> */}
 
-        <p className="w-fit text-start text-[0.9em]">
+        <p className="w-fit text-center text-[1em] leading-tight">
+          <span className="h-[0.25em] w-[0.25em] rounded-full bg-white"></span>{" "}
           {routes[location.pathname] ? routes[location.pathname] : "Error"}
         </p>
       </motion.div>
