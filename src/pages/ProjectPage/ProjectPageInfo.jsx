@@ -3,14 +3,14 @@ import Magnetic from "../../ui/Magnetic";
 const ProjectPageInfo = ({ project }) => {
   return (
     <div className="mx-auto flex max-w-[150rem] flex-col gap-4 px-4 pt-48 sm:px-paddingX sm:pt-[30vh] sm:portrait:px-12 sm:portrait:pt-[20vh]">
-      <div className="flex items-center justify-between gap-4 text-[3rem] sm:text-headingClamp">
-        <h1 className="font-medium">{project.title}</h1>
+      <div className="flex items-end justify-between gap-4 text-[3rem] sm:text-headingClamp">
+        <h1 className="font-medium leading-none">{project.title}</h1>
 
-        <div className="flex items-end justify-start gap-2 sm:translate-y-4 sm:gap-8">
+        <div className="flex items-center justify-start gap-2 sm:gap-8">
           <a href={project.demo} target="_blank" rel="noopener noreferrer">
             <Magnetic xOffset={1.5} yOffset={1.5}>
               <svg
-                className="sm:w-iconWidth hover:fill-darkBlue h-auto w-10 fill-black transition-colors duration-300"
+                className="h-auto w-10 fill-black transition-colors duration-300 hover:fill-darkBlue sm:w-iconWidth"
                 height="24px"
                 viewBox="0 0 24 24"
                 width="24px"
@@ -24,7 +24,7 @@ const ProjectPageInfo = ({ project }) => {
           <a href={project.github} target="_blank" rel="noopener noreferrer">
             <Magnetic xOffset={1.5} yOffset={1.5}>
               <svg
-                className="sm:w-iconWidth hover:fill-darkBlue h-auto w-10 fill-black transition-colors duration-300"
+                className="h-auto w-10 fill-black transition-colors duration-300 hover:fill-darkBlue sm:w-iconWidth"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -40,9 +40,9 @@ const ProjectPageInfo = ({ project }) => {
         </div>
       </div>
 
-      <div className="bg-borderLight mb-4 h-[1px] w-full" />
+      <div className="h-[1px] w-full bg-borderLight" />
 
-      <div className="sm:text-projectInfo flex flex-col gap-12 sm:flex-row">
+      <div className="flex flex-col gap-12 sm:flex-row sm:text-projectInfo">
         <div className="flex w-full flex-col gap-4">
           <h4 className="text-2xl text-black sm:text-[1.3em]">Description</h4>
           <p className="text-base leading-snug text-[#292727] sm:text-[1em]">

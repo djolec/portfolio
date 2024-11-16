@@ -97,7 +97,7 @@ const PageTransition = ({ children }) => {
       >
         <div className="h-[0.25em] w-[0.25em] rounded-full bg-white" />
 
-        <p className="text-[1em]">
+        <p className="w-fit text-start text-[0.9em]">
           {routes[location.pathname] ? routes[location.pathname] : "Error"}
         </p>
       </motion.div>
