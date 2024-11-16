@@ -2,15 +2,15 @@ const AboutInfo = () => {
   const info = [
     {
       title: "Crafting Experiences",
-      text: "I am a passionate front-end developer with a deep appreciation for building seamless, intuitive, and visually appealing web applications. With a strong foundation in JavaScript, React, and CSS frameworks like Tailwind, I specialize in creating responsive, user-friendly designs that deliver a polished experience across all devices. Every line of code I write aims to bridge the gap between creativity and functionality, turning ideas into interactive realities.",
+      text: "As a passionate front-end developer, I enjoy creating seamless, intuitive, and visually appealing web applications. With expertise in JavaScript, React, and CSS frameworks like Tailwind, I focus on responsive, user-friendly designs that shine on any device. My goal is to transform ideas into interactive realities by blending creativity with functionality.",
     },
     {
       title: "Learning & Growing",
-      text: "Driven by a curiosity for innovation, I constantly seek opportunities to expand my expertise. Whether diving into the nuances of API integration, experimenting with animation libraries like Framer Motion, or refining UI components with Styled Components, I thrive on solving challenges that require both logic and creativity. My dedication to staying at the forefront of modern web development ensures that I can tackle complex problems while maintaining clean, maintainable codebases.",
+      text: "I’m driven by a constant curiosity for innovation, always seeking to expand my skills. From mastering API integration to exploring animation tools like Framer Motion or enhancing UI components with Styled Components, I thrive on solving challenges that blend logic and creativity. Staying current with modern web trends enables me to build clean, maintainable codebases while tackling complex problems.",
     },
     {
       title: "Beyond Development",
-      text: "Beyond coding, I believe in the power of collaboration and communication. With over a decade of teaching experience in a different field, I’ve honed the ability to convey ideas effectively, fostering teamwork and mutual growth. I also enjoy exploring emerging technologies and integrating them into my projects, pushing the boundaries of what’s possible on the web.",
+      text: "Collaboration and communication are central to my approach. With over a decade of teaching experience in another field, I’ve developed strong skills in conveying ideas and fostering teamwork. I also enjoy exploring emerging technologies to push the limits of what’s possible on the web, bringing fresh ideas to life.",
     },
   ];
 

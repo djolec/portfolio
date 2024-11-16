@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const CurvedDiv = ({ bgColor }) => {
+const CurvedDiv = ({ bgColor = "white" }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
