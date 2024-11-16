@@ -18,13 +18,15 @@ const ProjectPage = () => {
       ? 0
       : projects.findIndex((item) => item.link === project.link) + 1;
 
+  const bgColor = project.features.length % 2 !== 0 ? project.color : "white";
+
   return (
     <PageTransition>
       <Header />
       <ProjectPageInfo project={project} />
-      <Devices folder={project.link} />
+      <Devices folder={project.link} laptopOnly={project.laptopOnly} />
       <ProjectPageFeatures project={project} />
-      <CurvedDiv />
+      <CurvedDiv bgColor={bgColor} />
       <NextProject nextProject={projects[nextIndex]} />
     </PageTransition>
   );

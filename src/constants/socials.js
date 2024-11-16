@@ -5,6 +5,6 @@ export const socials = [
   },
   {
     title: "LinkedIn",
-    link: "www.linkedin.com/in/đorđe-george-cvetkovic-9972a6338",
+    link: "https://www.linkedin.com/in/đorđe-george-cvetkovic-9972a6338",
   },
 ];

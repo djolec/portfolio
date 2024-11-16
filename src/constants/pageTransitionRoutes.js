@@ -7,5 +7,5 @@ export const routes = {
   "/contact/failed": "Failed",
   "/work/pexelify": "Pexelify",
   "/work/cook-io": "Cook.io",
-  "/work/countries": "Countries",
+  "/work/the-wild-oasis": "The Wild Oasis",
 };

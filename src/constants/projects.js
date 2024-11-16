@@ -66,18 +66,42 @@ export const projects = [
       },
     ],
   },
+
   {
-    title: "Countries",
-    src: "countries.webp",
-    color: "#EFE8D3",
-    link: "countries",
+    title: "The Wild Oasis",
+    github: "https://github.com/djolec/the-wild-oasis",
+    demo: "https://wild-oasis-admin.netlify.app",
+    src: "wildoasis.webp",
+    color: "#075985",
+    link: "the-wild-oasis",
+    laptopOnly: true,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis natus alias consectetur eligendi soluta recusandae officia, ex sit itaque nostrum quos laboriosam quidem. Temporibus, non.",
-    technologies: ["ReactJS", "Material UI", "Framer Motion", "GSAP"],
+      "The Wild Oasis is an internal admin dashboard tailored for managing guest check-ins and check-outs, cabin availability, and daily hotel operations for the Wild Oasis Hotel. Designed for hotel staff, this secure application streamlines operational workflows and enhances the overall guest experience.",
+    technologies: ["ReactJS", "Styled-Components", "Supabase"],
     features: [
       {
-        text: "Experience our cooking recipe app in your preferred ambiance with both light and dark modes, providing comfort and ease of use for any time of day or night.",
-        video: "cook-darklight.mp4",
+        text: "The Wild Oasis dashboard provides a quick overview of hotel operations, showing daily check-ins and check-outs, bookings, sales stats, occupancy rates, and revenue breakdowns. It ensures employees have essential data at a glance for efficient decision-making.",
+        video: "dashboard.webm",
+        // textColor: "black",
+      },
+      {
+        text: "The Wild Oasis app simplifies booking management by displaying all reservations in a table with arrival and departure dates, payment status, and booking status (unconfirmed, checked in, or checked out). Employees can filter bookings, confirm payments, and easily check guests in or out.",
+        video: "bookings.webm",
+        // textColor: "black",
+      },
+      {
+        text: "Managing cabins is effortless with detailed insights like price, capacity, and discounts. Employees can create, update, or delete cabins, upload photos, and maintain accurate information with ease.",
+        video: "cabins.webm",
+        // textColor: "black",
+      },
+      {
+        text: "Handle user accounts securely with features that allow employees to update profiles, upload avatars, and reset passwords. New users can be registered within the app, ensuring smooth onboarding and controlled access.",
+        video: "users.webm",
+        // textColor: "black",
+      },
+      {
+        text: "Enhance usability with a built-in dark mode, providing a visually comfortable experience for users in low-light environments while maintaining a sleek, modern interface.",
+        video: "dark-mode.webm",
         // textColor: "black",
       },
     ],

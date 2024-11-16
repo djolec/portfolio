@@ -24,7 +24,6 @@ const PageTransition = ({ children }) => {
       top: -100,
       transition: {
         duration: 0.75,
-
         ease: [0.76, 0, 0.24, 1],
       },
       transitionEnd: {

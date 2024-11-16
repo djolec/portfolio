@@ -7,7 +7,7 @@ const Socials = ({ position }) => {
 
   return (
     <div
-      className={`text-socialsText z-10 mx-auto flex w-full max-w-[150rem] px-4 pb-4 sm:flex-row sm:justify-between sm:px-16 portrait:flex-col-reverse sm:portrait:px-paddingX sm:portrait:pb-10 sm:portrait:text-[2.2vw] ${position === "absolute" ? "absolute bottom-0" : ""}`}
+      className={`z-10 mx-auto flex w-full max-w-[150rem] px-4 pb-4 text-socialsText sm:flex-row sm:justify-between sm:px-16 portrait:flex-col-reverse sm:portrait:px-paddingX sm:portrait:pb-10 sm:portrait:text-[2.2vw] ${position === "absolute" ? "absolute bottom-0" : ""}`}
     >
       <div className="">
         <p className="mb-2 text-[0.9em] text-white/60">LOCAL TIME</p>

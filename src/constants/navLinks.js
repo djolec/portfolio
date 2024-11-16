@@ -5,7 +5,7 @@ export const links = [
   },
   {
     text: "Work",
-    to: ["/work", "/work/pexelify", "/work/cook-io", "/work/countries"],
+    to: ["/work", "/work/pexelify", "/work/cook-io", "/work/the-wild-oasis"],
   },
   {
     text: "About",

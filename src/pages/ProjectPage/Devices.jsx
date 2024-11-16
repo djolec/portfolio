@@ -2,7 +2,7 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import useIsMobile from "../../hooks/useIsMobile";
 
-const Devices = ({ folder }) => {
+const Devices = ({ folder, laptopOnly }) => {
   const isMobile = useIsMobile();
   const ref = useRef(null);
 
@@ -65,6 +65,58 @@ const Devices = ({ folder }) => {
       },
     },
   };
+
+  if (laptopOnly) {
+    return (
+      <motion.div
+        className="relative mx-auto flex w-full max-w-[150rem] items-center justify-center overflow-hidden py-16 sm:py-32"
+        ref={ref}
+      >
+        <div className="relative w-[69%] sm:w-[58%]">
+          {isMobile ? (
+            <>
+              <img
+                className="h-auto w-full"
+                height="580"
+                width="1000"
+                loading="eager"
+                src="/images/frames/laptop_frame.webp"
+              />
+
+              <img
+                className="absolute left-[12%] top-[6%] h-auto w-[75.8%]"
+                height="571"
+                width="900"
+                loading="eager"
+                src={`/images/${folder}/devices/laptop-mobile.webp`}
+                alt=""
+              />
+            </>
+          ) : (
+            <>
+              <motion.img
+                className="h-auto w-full"
+                height="862"
+                width="1487"
+                loading="eager"
+                {...anim(laptop)}
+                src="/images/frames/laptop_frame.webp"
+              />
+
+              <motion.img
+                className="absolute left-[12%] top-[6%] h-auto w-[75.8%]"
+                height="914"
+                width="1449"
+                loading="eager"
+                {...anim(laptop)}
+                src={`/images/${folder}/devices/laptop.webp`}
+              />
+            </>
+          )}
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div
