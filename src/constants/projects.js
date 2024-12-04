@@ -8,7 +8,7 @@ export const projects = [
     link: "pexelify",
     description:
       "Pexelify is a contemporary and user-friendly web application that simplifies the process of downloading high-quality, royalty-free photos and videos.",
-    technologies: ["ReactJS", "Material UI", "Framer Motion", "GSAP"],
+    technologies: ["ReactJS", "Tailwind CSS", "Framer Motion", "GSAP"],
     features: [
       {
         text: "Enhance your browsing experience with our Dark and Light mode options, allowing you to switch seamlessly between comfortable reading themes for any lighting condition on our web app.",
